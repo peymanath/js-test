@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { max } from "../src/intro";
+import { fizzBuzz, max } from "../src/intro";
 
 describe("max", () => {
   // First Test
@@ -39,5 +39,23 @@ describe("max", () => {
 
     // Assert
     expect(result).toBe(4);
+  });
+});
+
+describe("fizzBuzz", () => {
+  it("should return FizzBuzz if arg is divisible by 3 and 5", () => {
+    expect(fizzBuzz(15)).toBe("FizzBuzz");
+  });
+
+  it("should return Fizz if arg is divisible by 3", () => {
+    expect(fizzBuzz(9)).toBe("Fizz");
+  });
+
+  it("should return Buzz if arg is divisible by 5", () => {
+    expect(fizzBuzz(10)).toBe("Buzz");
+  });
+
+  it("should return arg as a string if it is not divisible by 3 or 5", () => {
+    expect(fizzBuzz(11)).toBe("11");
   });
 });
